@@ -1,6 +1,8 @@
 grammar LabeledExpr;
 import ComponenteLexer;
 
+prog: stat+ ;
+
 stat:   expr NEWLINE        # printExpr
     |   ID '=' expr NEWLINE # assign
     |   NEWLINE             # blank
