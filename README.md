@@ -86,7 +86,45 @@ Y esto te muestra la ayuda, ¡todo está listo! 🎯
 
 ## 🚀 Próximo paso
 
+📂 Al clonar o descargar este repositorio, encontrarás varios archivos. A continuación, te explicamos su propósito para que comprendas mejor su función.
+
+## 🏗️ Archivos de configuración del entorno
+### 📌 flake.lock y flake.nix
+
+Estos archivos definen el entorno de desarrollo preconfigurado que mencionamos anteriormente en la sección de instalación y preparación. Son fundamentales para garantizar que todo funcione correctamente, así que no los muevas ni edites a menos que quieras experimentar con la configuración para aprender más sobre Nix y Flakes.
+
+## 🔡 Archivos de la gramática (ANTLR)
+
+### 📌 ComponenteLexer.g4
+
+Este archivo es esencial, ya que define las reglas léxicas 📝. Aquí se establecen qué caracteres forman un identificador (ID), un número entero (INT), una nueva línea (NEWLINE), etc.
+Sin este archivo, no podríamos hacer el análisis léxico, porque es el encargado de definir cómo reconocer los tokens.
+
+### 📌 LabeledExpr.g4
+
+Terminales y no terminales (estructura de la gramática) las Reglas de precedencia y operaciones según los caracteres de entrada.
+Ademas la Asignación de tokens para estructurar la expresión matemática.
+Básicamente, este archivo le da forma y significado a los cálculos que haremos con la calculadora.
+
+## 💻 Código de la calculadora
+
+### 📌 Calc.java
+
+Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método main(), que:
+
+- Crea el lexer y el parser basados en la gramática definida.
+- Ejecuta y procesa las expresiones ingresadas por el usuario.
+- Orquesta la funcionalidad de la calculadora para devolver los resultados correctamente.
+
+### 📌 EvalVisitor.java
+
+Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
+En este caso el EvalVisitor implementa este algoritmo actua como visitante para el arbol de analisis sintactico generado por ANTLR.
+
 Con ANTLR instalado ¡Podemos Proseguir! 💻🎉
+
+
+
 
 
 
