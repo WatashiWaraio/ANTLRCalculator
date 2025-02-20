@@ -121,10 +121,45 @@ Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método m
 Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
 En este caso el EvalVisitor implementa la interfaz que crea ANTLR.
 
-## Ejecucion de la calculadora 🥴
+## Ejecucion de la calculadora 🥴 
+
+```bash
+ antlr4 -no-listener -visitor LabeledExpr.g4
+```
+Usa ANTLR para procesar el archivo de gramática LabeledExpr.g4 y Genera los archivos necesarios para el lexer  y el parser .
+Se usa -no-listener porque no queremos generar la estructura de Listener.
+Se usa -visitor porque sí queremos generar la estructura de Visitor (que es lo que usa EvalVisitor
+
+```bash
+ javac LabeledExpr*.java EvalVisitor.java Calc.java
+```
+Compila todos los archivos Java generados (LabeledExpr*.java).
+También compila EvalVisitor.java (el evaluador de expresiones).
+Compila Calc.java, que es el programa principal.
+
+```bash
+java -cp .:$CLASSPATH Calc
+```
+Ejecuta la clase Calc (el programa principal).
 
 
+## PRUEBAS 😮
 
+Realizamos nueve pruebas distintas, las cuales podrán encontrar en el repositorio una vez lo clonen. Cada una de estas pruebas representa un reto diferente para la calculadora.
+
+Para facilitar el proceso de ejecución, se ha creado un script en Bash, permitiendo ejecutar las pruebas con un solo comando.
+
+si quieres ejecutar todas las pruebas pon este comadno : 
+
+```bash
+ejecutar_pruebas.sh —all
+```
+
+Pero si quieres probar algunas especificas puedes usar 
+
+```bash
+ejecutar_pruebas.sh 3,1,5 #Este es un ejemplo
+```
 
 
 ¡Saludos! 🚀🔥
