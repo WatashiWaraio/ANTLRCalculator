@@ -121,8 +121,7 @@ Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método m
 Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
 En este caso el EvalVisitor implementa este algoritmo actua como visitante para el arbol de analisis sintactico generado por ANTLR.
 
-Con ANTLR instalado ¡Podemos Proseguir! 💻🎉
-
+## Ejecucion de la calculadora 🥴
 
 
 
