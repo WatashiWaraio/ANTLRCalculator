@@ -160,16 +160,6 @@ Pero si quieres probar algunas especificas puedes usar
 ```bash
 bash ejecutar_pruebas.sh 3,1,5 #Este es un ejemplo
 ```
-![image](https://github.com/user-attachments/assets/4b7700f5-bb76-4104-a7a4-d46a423aa7c6)
-![image](https://github.com/user-attachments/assets/a9408d49-4a1e-447b-9d39-39ff46fecc47)
-![image](https://github.com/user-attachments/assets/65b3e98f-40f6-44ad-8fb5-0c0ea7379654)
-![image](https://github.com/user-attachments/assets/a821fad2-4996-4212-bdd0-b183e624d92f)
-![image](https://github.com/user-attachments/assets/881fb8a2-693d-412e-bcfb-883011334fec)
-![image](https://github.com/user-attachments/assets/414d243b-ed01-4df7-9b44-c4e1d73e6270)
-![image](https://github.com/user-attachments/assets/a6150203-9b1c-4ae0-a0fa-5a9edf87a924)
-![image](https://github.com/user-attachments/assets/2926bbb1-a628-4dd8-a663-de85960bffee)
-![image](https://github.com/user-attachments/assets/0f519224-1b06-48dd-81af-d21297103ecd)
-
 
 
 
