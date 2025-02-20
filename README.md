@@ -119,7 +119,7 @@ Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método m
 ### 📌 EvalVisitor.java
 
 Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
-En este caso el EvalVisitor implementa este algoritmo actua como visitante para el arbol de analisis sintactico generado por ANTLR.
+En este caso el EvalVisitor implementa la interfaz que crea ANTLR.
 
 ## Ejecucion de la calculadora 🥴
 
