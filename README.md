@@ -152,13 +152,13 @@ Para facilitar el proceso de ejecución, se ha creado un script en Bash, permiti
 si quieres ejecutar todas las pruebas pon este comadno : 
 
 ```bash
-ejecutar_pruebas.sh —all
+bash ejecutar_pruebas.sh —all
 ```
 
 Pero si quieres probar algunas especificas puedes usar 
 
 ```bash
-ejecutar_pruebas.sh 3,1,5 #Este es un ejemplo
+bash ejecutar_pruebas.sh 3,1,5 #Este es un ejemplo
 ```
 
 
