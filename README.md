@@ -124,7 +124,7 @@ En este caso el EvalVisitor implementa la interfaz que crea ANTLR.
 ## Ejecucion de la calculadora 🥴 
 
 ```bash
- antlr4 -no-listener -visitor LabeledExpr.g4
+ antlr -no-listener -visitor LabeledExpr.g4
 ```
 Usa ANTLR para procesar el archivo de gramática LabeledExpr.g4 y Genera los archivos necesarios para el lexer  y el parser .
 Se usa -no-listener porque no queremos generar la estructura de Listener.
