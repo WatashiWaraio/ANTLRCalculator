@@ -15,7 +15,7 @@ Para implementar nuestra calculadora, utilizaremos el patrón de diseño *Visito
 Antes de iniciar, asegúrate de tener lo siguiente instalado en tu sistema:
 
   - Java JDK (versión 8 o superior) ☕
-
+  - Python 3 🐍
   - ANTLR 4 🔡
 
 ## 🔽 Instalación de ANTLR
@@ -81,6 +81,11 @@ Finalmente la forma en que lo hayas instalado, si ejecutas el siguiente comando:
 ```bash
 antlr
 ```
+**NOTA:Para poder ejecutar en Python debes tener 'pip' instalado luego tenemos que intalar el paquete que permite que los analizadores funcionen correctamente en Python con el siguiente comando:**
+
+```bash
+pip install antlr4-python3-runtime
+```
 
 Y esto te muestra la ayuda, ¡todo está listo! 🎯
 
@@ -108,7 +113,7 @@ Básicamente, este archivo le da forma y significado a los cálculos que haremos
 
 ## 💻 Código de la calculadora
 
-### 📌 Calc.java
+### 📌 Calc.java - Calc.py
 
 Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método main(), que:
 
@@ -116,12 +121,14 @@ Este archivo es el corazón del proyecto ❤️. Aquí se encuentra el método m
 - Ejecuta y procesa las expresiones ingresadas por el usuario.
 - Orquesta la funcionalidad de la calculadora para devolver los resultados correctamente.
 
-### 📌 EvalVisitor.java
+### 📌 EvalVisitor.java - EvalVisitor.py
 
 Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
 En este caso el EvalVisitor implementa la interfaz que crea ANTLR.
 
 ## Ejecucion de la calculadora 🥴 
+
+## Para Java ☕ :
 
 ```bash
  antlr -no-listener -visitor LabeledExpr.g4
@@ -142,6 +149,18 @@ java -cp .:$CLASSPATH Calc
 ```
 Ejecuta la clase Calc (el programa principal).
 
+## Para Python 🐍 :
+
+```bash
+ antlr -no-listener -visitor -Dlanguage=Python3  LabeledExpr.g4
+```
+Para generar los archivos necesarios para el analizador léxico y sintáctico en Python.
+-Dlanguage=Python3: Especifica que el código generado debe ser para Python 3.
+
+```bash
+python3 Calc.py
+```
+Ejecuta la clase Calc (el programa principal).
 
 ## PRUEBAS 😮
 
