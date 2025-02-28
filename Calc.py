@@ -6,6 +6,7 @@ from LabeledExprParser import LabeledExprParser
 from CommonLexerRules import CommonLexerRules
 from EvalVisitor import  Evalvisitor
 
+
 def main():
 
     visitor=Evalvisitor() #Instancia visitor
@@ -24,5 +25,5 @@ def main():
         if result is not None:
             print("Resultado: ", result)
 
-if name=="main":
+if __name__=="__main__":
     main()
