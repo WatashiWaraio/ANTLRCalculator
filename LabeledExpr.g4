@@ -8,7 +8,11 @@ stat:   expr NEWLINE        # printExpr
     |   NEWLINE             # blank
     ;
 
-expr:   'sqrt' '('expr')'           #Sqrt
+expr:   'SQR_' expr           #Sqrt
+    |   'sin' '(' expr ')'              #sin 
+    |   'cos' '(' expr ')'              #cos
+    |   'tan' '(' expr ')'              #tan
+    |   'log3' '(' expr ')'           #log3
     |   expr '^' expr               #Pow 
     |   expr op=('*'|'/') expr      # MulDiv
     |   expr op=('+'|'-') expr      # AddSub

@@ -1,5 +1,6 @@
 from LabeledExprParser import LabeledExprParser
 from LabeledExprVisitor import LabeledExprVisitor
+import math
 
 class Evalvisitor(LabeledExprVisitor):
     def init(self):
@@ -47,7 +48,7 @@ class Evalvisitor(LabeledExprVisitor):
         name = ctx.ID().getText()
         return self.memory.get(name, 0)  # Retorna 0 si la variable no existe
     
-    def visitPow(sefl,ctx):
+    def visitPow(self,ctx):
         base = self.visit(ctx.expr(0))
         exponent = self.visit(ctx.expr(1))
         return base ** exponent
@@ -55,3 +56,19 @@ class Evalvisitor(LabeledExprVisitor):
     def visitSqrt(self,ctx):
         value = self.visit(ctx.expr())
         return value ** (1/2)
+    
+    def visitSin(self,ctx):
+        value = self.visit(ctx.expr())
+        return math.sin(value)
+    
+    def visitCos(self,ctx):
+        value = self.visit(ctx.expr())
+        return math.cos(value)
+    
+    def visitTan(self,ctx):
+        value = self.visit(ctx.expr())
+        return math.tan(value)
+    
+    def visitLog3(self,ctx):
+        value = self.visit(ctx.expr())
+        return math.log(value,3)
