@@ -8,13 +8,16 @@ stat:   expr NEWLINE        # printExpr
     |   NEWLINE             # blank
     ;
 
-expr:   expr op=('*'|'/') expr      # MulDiv
+expr:   'sqrt' '('expr')'           #Sqrt
+    |   expr '^' expr               #Pow 
+    |   expr op=('*'|'/') expr      # MulDiv
     |   expr op=('+'|'-') expr      # AddSub
     |   INT                         # int
     |   ID                          # id
     |   '(' expr ')'                # parens
     ;
 
+POW : '^' ;
 MUL : '*' ; // assigns token name to '*' used above in grammar
 DIV : '/' ;
 ADD : '+' ;
