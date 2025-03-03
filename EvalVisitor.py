@@ -47,7 +47,7 @@ class Evalvisitor(LabeledExprVisitor):
         name = ctx.ID().getText()
         return self.memory.get(name, 0)  # Retorna 0 si la variable no existe
     
-    def visitPow(sefl,ctx):
+    def visitPow(self,ctx):
         base = self.visit(ctx.expr(0))
         exponent = self.visit(ctx.expr(1))
         return base ** exponent
